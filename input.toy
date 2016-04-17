@@ -1,0 +1,45 @@
+/*Program used for debugging.
+  Intermediate code generation seems to work fine with this */
+
+program test{
+	int function(in x){
+		declareint i, sum;
+		sum := 0;
+		for(i:=0; i<N; i+=1){
+			sum := sum + 1;
+		}
+		print(sum);
+		return(sum);
+	}
+	void procedure(in x, inout y){
+		int fun1(){
+			z:=2
+		}
+		x := 1;
+		y := 1;
+	}
+	
+	x := function(in x);
+	call procedure(in x, inout y);
+	
+	if(x <> 54 or x < 3 and x = 4){
+		while( x < 12){
+			x:= 2;
+			y:= 2;
+		}
+	}
+	else{
+		if(x/2 = 4){
+			print(yes);
+		}
+	}
+	x:=2;
+
+
+	if(x = y){
+		print(1);
+	};
+/* AND FINALY */
+	x := max( in max(in a, in b), in max(in c, in d));
+
+}

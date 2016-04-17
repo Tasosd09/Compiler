@@ -1,0 +1,81 @@
+L100:	jmp  L119
+  
+L102:	movi R[1], 6
+	movi R[255], M[12 + R[0]]
+	movi M[R[255]], R[1]
+L103:	jmp M[R[0]]
+     	            
+L105:	movi R[255], R[0]
+	movi R[254], 12
+	addi R[255], R[254], R[255]
+	movi R[1], M[R[255]]	movi M[28 + R[0]], R[1]L106:	movi R[255], M[4 + R[0]]
+	movi M[20 + R[0]], R[255]
+	movi R[255], 16
+	addi R[0], R[255], R[0]
+	movi R[255], $
+	movi R[254], 15
+	addi R[255], R[255], R[254]
+	movi M[R[0]], R[255]
+	jmp  L102
+	movi R[255], 16
+	subi R[0], R[0], R[255]
+L107:	movi R[1], 1
+	movi R[255], M[8+R[0]]
+	movi M[R[255]], R[1]
+	jmp M[R[0]]
+L108:	jmp M[R[0]]
+     	            
+L110:	movi R[255], R[0]
+	movi R[254], 12
+	addi R[255], R[254], R[255]
+	movi M[40 + R[0]], R[255]
+L111:	movi R[255], R[0]
+	movi R[254], 20
+	addi R[255], R[254], R[255]
+	movi M[36 +R[0]], R[255]
+L112:	movi M[32 + R[0]], R[0]
+	movi R[255], 28
+	addi R[0], R[255], R[0]
+	movi R[255], $
+	movi R[254], 15
+	addi R[255], R[255], R[254]
+	movi M[R[0]], R[255]
+	jmp  L105
+	movi R[255], 28
+	subi R[0], R[0], R[255]
+L113:	movi R[1], M[20 + R[0]]
+	movi M[16 + R[0]], R[1]
+L114:	movi R[1], M[12 + R[0]]
+	movi R[2], M[16 + R[0]]
+	addi R[3], R[1], R[2]
+	movi M[24 + R[0]], R[3]
+L115:	movi R[1], M[24 + R[0]]
+	movi R[255], M[8+R[0]]
+	movi M[R[255]], R[1]
+	jmp M[R[0]]
+L116:	jmp M[R[0]]
+     	            
+L119:	movi R[1], 12
+	movi M[612], R[1]
+L120:	movi R[255], M[612]
+	movi M[36 + R[0]], R[255]
+L121:	movi R[255], R[0]
+	movi R[254], 20
+	addi R[255], R[254], R[255]
+	movi M[32 +R[0]], R[255]
+L122:	movi R[255], M[4 + R[0]]
+	movi M[28 + R[0]], R[255]
+	movi R[255], 24
+	addi R[0], R[255], R[0]
+	movi R[255], $
+	movi R[254], 15
+	addi R[255], R[255], R[254]
+	movi M[R[0]], R[255]
+	jmp  L110
+	movi R[255], 24
+	subi R[0], R[0], R[255]
+L123:	movi R[1], M[620]
+	movi M[616], R[1]
+L124:	movi R[1], M[616]
+	outi R[1]
+L125:	halt
